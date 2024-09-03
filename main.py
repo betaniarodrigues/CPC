@@ -6,7 +6,7 @@ from utils import save_model, set_all_seeds
 
 
 # ------------------------------------------------------------------------------
-if __name__ == '__main__':
+if __name__ == "__main__":
     args = parse_args()
     set_all_seeds(args)
     print(args)
@@ -18,12 +18,13 @@ if __name__ == '__main__':
     model = CPC(args).to(args.device)
 
     # Training the model
-    print('Training the model')
-    model = learn_model(model, data_loaders=data_loaders,
-                        dataset_sizes=dataset_sizes, args=args)
+    print("Training the model")
+    model = learn_model(
+        model, data_loaders=data_loaders, dataset_sizes=dataset_sizes, args=args
+    )
 
     # Save the model
-    print('Saving the trained model!')
+    print("Saving the trained model!")
     save_model(model, args)
 
-    print('---------Training complete!---------')
+    print("---------Training complete!---------")
