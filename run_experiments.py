@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from arguments import parse_args
 from utils import set_all_seeds
 import pandas as pd
-from evaluate_with_classifier import evaluate_with_classifier  # assumindo que o evaluate_with_classifier está em evaluate_with_classifier.py
+from evaluate_with_classifier import evaluate_with_classifier 
 
 plt.rcParams['font.family'] = 'serif'
 
@@ -71,7 +71,7 @@ def run_experiments(args):
     :return: None
     """
     datasets = ["UCI_raw", "KuHar_raw", "MotionSense_raw", "RealWorld_raw"]  # Lista de datasets a serem testados
-    data_percentages = [10, 50, 100]  # Variações de porcentagem de dados (10%, 50%, 100%)
+    data_percentages = [1, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]  # Variações de porcentagem de dados 
 
     results_csv = 'experiments_results.csv'
     
