@@ -21,7 +21,7 @@ def parse_args():
     # Training settings
     parser.add_argument("-b", "--batch_size", type=int, default=64)
     parser.add_argument("--learning_rate", type=float, default=5e-4)
-    parser.add_argument("--num_epochs", type=int, default=150)
+    parser.add_argument("--num_epochs", type=int, default=1)
     parser.add_argument("--gpu_id", type=str, default="0")
 
     # Dataset to train on
